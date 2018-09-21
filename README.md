@@ -9,7 +9,7 @@ B06104006
 
 
 ---
-Week2
+Week 2
 
 In class:
 
@@ -22,10 +22,10 @@ In class:
 
 homework:  
 
-    https://spark-syz.herokuapp.com/
+`https://spark-syz.herokuapp.com/`
 
 ---
-Week1
+Week 1
 
 In class:
 
@@ -35,6 +35,8 @@ In class:
 
 Homework:
 
-    https://spark-syz.herokuapp.com/
+1. Hello, World.  
+
+`https://spark-syz.herokuapp.com/`
 
 ---
