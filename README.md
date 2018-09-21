@@ -25,3 +25,5 @@ link: https://spark-syz.herokuapp.com/
 Week2
 
 In class:
+
+1. Pre-set :x
