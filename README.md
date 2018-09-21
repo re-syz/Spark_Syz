@@ -22,6 +22,8 @@ In class:
 
 homework:  
 
+1. CSS background
+
 `https://spark-syz.herokuapp.com/`
 
 ---
