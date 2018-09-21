@@ -1,0 +1,103 @@
+[33mcommit b75d90a7d5dd95d3f6ffd0b0992bd61fbfc7eaa9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: a380d23 212de74
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 14:26:40 2018 +0800
+
+    Merge branch 'master' of https://github.com/spark131072/Spark_Syz
+
+[33mcommit a380d2351f5a89ce38da38a8089b4376a397e734[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 14:25:06 2018 +0800
+
+    210918_week2_9
+
+[33mcommit 212de748fac3e835335ddec560884a30805ee2dc[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 14:23:16 2018 +0800
+
+    210918_week2_8
+
+[33mcommit 78742036324e8328210aaef2f0ddaa95b55ec6a6[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 13:48:15 2018 +0800
+
+    210918_week2_8
+
+[33mcommit 331c319cce8e57779bb2dfb234fbe970411e84e5[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 13:20:44 2018 +0800
+
+    210918_week2_7
+
+[33mcommit 91f1b2d6521e00dae49ace99a106452b76427574[m[33m ([m[1;31mheroku/master[m[33m)[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 12:04:20 2018 +0800
+
+    210918_week2_6
+
+[33mcommit a94c6a3bdca1194a727a3fec40bf2b58e2a1b4c2[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 12:01:54 2018 +0800
+
+    210918_week2_5
+
+[33mcommit f414d40b5e45fe69b3a30f1f141452e1a81cd4ad[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 11:43:29 2018 +0800
+
+    210918_week2_4
+
+[33mcommit b057f157521ac07e7e6324c0b14498259eb737f7[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 11:37:02 2018 +0800
+
+    210918_week2_3
+
+[33mcommit bbd27667cdecd1e94a9893c277da2f0acb55210f[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 11:25:46 2018 +0800
+
+    210918_week2_2
+
+[33mcommit c1c12e6faa9ae32f076deb692501ba2776ee3721[m
+Merge: d7fb06a d8dcf0f
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 11:16:03 2018 +0800
+
+    Merge branch 'master' of https://github.com/spark131072/Spark_Syz
+
+[33mcommit d7fb06a1105abc8ea8532ccf02465303be70394d[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 11:15:32 2018 +0800
+
+    '210918_week2_1'
+
+[33mcommit d8dcf0f2fe32bfbb6a02337504d5307e96d10a2a[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 10:36:51 2018 +0800
+
+    'test'
+
+[33mcommit 52f884e97fc1f5c9c55d001bc3c0a67f77fcebdf[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 10:35:57 2018 +0800
+
+    'test'
+
+[33mcommit c3f101ecc0b966b4f4bb2b3c8b484b7486346a65[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 10:09:34 2018 +0800
+
+    sec
+
+[33mcommit 1de0435033ac1b45f573a7f18965ace9b0bc3d99[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 09:58:44 2018 +0800
+
+    Initial Commit
+
+[33mcommit b1793a1f174a75fe2c9521064bd5f6a68cfb35ac[m
+Author: spark131072 <spark131072@gmail.com>
+Date:   Fri Sep 21 09:56:14 2018 +0800
+
+    Initial commit
