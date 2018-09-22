@@ -23,6 +23,7 @@ In class:
 homework:  
 
 1. CSS background
+2. Edit html
 
 `https://spark-syz.herokuapp.com/`
 
