@@ -23,6 +23,6 @@ import random
 # =============
 
 def index(request):
-    Kort = str("Kort")
-    Spark = str("Spark")
+    Kort = "Kort"
+    Spark = "Spark"
     return render(request, 'index.html')
