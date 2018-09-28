@@ -8,6 +8,22 @@ B06104006
 郭庭瑞  
 
 
+
+
+
+---
+Week 3
+
+In class:
+
+1. Install django-heroku
+2. Learn template language
+3. Edit html file
+
+Homework:
+
+1. Edit view.py and html file
+
 ---
 Week 2
 
@@ -20,7 +36,7 @@ In class:
 5. Learn CSS and html
 6. Edit CSS and html files
 
-homework:  
+Homework:  
 
 1. CSS background
 2. Edit html
