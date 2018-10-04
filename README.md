@@ -23,6 +23,9 @@ In class:
 Homework:
 
 1. Edit view.py and html file
+2. Try template language
+
+`https://spark-syz.herokuapp.com/`
 
 ---
 Week 2
