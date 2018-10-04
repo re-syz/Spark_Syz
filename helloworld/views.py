@@ -29,4 +29,4 @@ def index(request):
     msgs = [default_msg for i in range(len(default_msg))]
     imgids = [random.randint(1, 500) for i in range(len(default_msg))]
     imgurls = ["https://picsum.photos/200/200/?image={}".format(imgid) for imgid in imgids]
-    return render(request, 'index.html')
+    return render(request, 'index.html', locals())
