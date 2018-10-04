@@ -26,7 +26,8 @@ def index(request):
     Kort = "Kort"
     Spark = "Spark"
 
-    imgids = [random.randint(771,791) for i in range(20)]
+
+    imgids_local = [random.randint(771,791) for i in range(20)]
     imgurls_local = ["DSC_0{}".format(imgid_local) for imgid_local in imgids_local]
 
     default_msg = "Hey! Here are random photos on the Internet."
