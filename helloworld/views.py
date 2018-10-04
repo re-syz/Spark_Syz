@@ -28,5 +28,5 @@ def index(request):
     default_msg = "Hey! Here are random photos on the Internet."
     msgs = [default_msg for i in range(len(default_msg))]
     imgids = [random.randint(1, 1072) for i in range(len(default_msg))]
-    imgurls = ["https://picsum.photos/200/200/?image={}".format(imgid) for imgid in imgids]
+    imgurls = ["https://picsum.photos/572/572/?image={}".format(imgid) for imgid in imgids]
     return render(request, 'index.html', locals())
