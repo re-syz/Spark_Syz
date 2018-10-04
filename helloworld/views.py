@@ -16,7 +16,6 @@ from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from bs4 import BeautifulSoup
 import random
 
 
