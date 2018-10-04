@@ -25,4 +25,6 @@ import random
 def index(request):
     Kort = "Kort"
     Spark = "Spark"
+    imgids = [random.randint(1, 500) for i in range(len(default_msg))]
+	imgurls = ["https://picsum.photos/200/200/?image={}".format(imgid) for imgid in imgids]
     return render(request, 'index.html')
