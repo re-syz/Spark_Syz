@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Spark_Syz Week2_homework</title>
+    <title>Spark_Syz Week3_homework</title>
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body id="main" :after>
@@ -21,6 +21,12 @@
                 <span class="name">Spark</span>
                 Hello,Kort.
             </div>
+        </div>
+        <div>
+            {% for imgurl_local in imgurls_local %}
+                <!-- <span>{{imgurl}}</span> -->
+                <img src="{{imgurl_local}}" alt={{imgurl_local}}>
+            {% endfor %}
         </div>
         <div>
             {% for imgurl in imgurls %}
