@@ -27,9 +27,25 @@ def index(request):
     Kort = "Kort"
     Spark = "Spark"
 
-    t1 = TextMessage.objects.create(talker = Kort, message = "Hey, Spark!")
-    t2 = TextMessage.objects.create(talker = Spark, message = "Hello, Kort! :)")
-
-    msgs = TextMessage.objects.all()
+    # t1 = TextMessage.objects.create(talker = Kort, message = "Hey, Spark!")
+    # t2 = TextMessage.objects.create(talker = Spark, message = "Hello, Kort! :)")
+    #
+    # msgs = TextMessage.objects.all()
 
     return render(request, 'index.html', locals())
+
+from django.shortcuts import render,redirect   # 加入 redirect 套件
+from django.contrib.auth import authenticate
+from django.contrib import auth
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+
+
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def portfolio(request):
+    return render(request, 'portfolio.html')
