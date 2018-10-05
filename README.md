@@ -9,8 +9,28 @@ B06104006
 
 
 
+`https://spark-syz.herokuapp.com/`
 
 
+---
+Week 4
+
+In class:
+
+1. Install SQLite
+2. Create guestbook
+3. Learn how to use SQL through Django
+4. Edit view.py
+5. Edit HTML and CSS file
+6. Complete mission in tutorial
+
+Homework:
+
+1. Edit HTML and CSS file
+2. Try to change CSS and HTML template
+3. Learn how to control SQL
+
+`https://spark-syz.herokuapp.com/`
 
 ---
 Week 3
