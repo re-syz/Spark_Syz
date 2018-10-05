@@ -13,16 +13,6 @@
     </h2>
     <div id="container">
         <div id="content">
-            <div class="msg">
-                <span class="name">Kort</span>
-                Hello,Spark
-            </div>
-            <div class="msg">
-                <span class="name">Spark</span>
-                Hello,Kort.
-            </div>
-        </div>
-        <div id="content">
             {% for msg in msgs %}
                 <div class='msg'>
                     <span class="name">{{msg.talker}}</span>
