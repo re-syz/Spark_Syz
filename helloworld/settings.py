@@ -86,7 +86,14 @@ WSGI_APPLICATION = 'helloworld.wsgi.application'
 # }
 import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Spark',
+        'USER': 'Spark',
+        'PASSWORD': '2609',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 
