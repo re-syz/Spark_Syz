@@ -88,7 +88,7 @@ import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Spark',
+        'NAME': 'spark_syz',
         'USER': 'Spark',
         'PASSWORD': '2609',
         'HOST': 'localhost',
