@@ -49,7 +49,7 @@
                 {% endfor %}
             </div>
             <div id="send-box">
-                <form id="send-form" action="." method="post">
+                <form id="send-form" action="." method="get">
                     {% csrf_token %}
                     <input type="text" name="name" id="name" placeholder="ID">
                     <input type="text" name="msg" id="msg" placeholder="Message">

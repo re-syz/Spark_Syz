@@ -42,6 +42,9 @@ def guestbook(request):
     Kort = "Kort"
     Spark = "Spark"
 
+    if 'name' in request.GET:
+        txt_msg = TextMessage.objects.create(talker=request.GET['name'], message=request.GET['msg'])
+
     # t1 = TextMessage.objects.create(talker=Kort, message="Hey, Spark!")
     # t2 = TextMessage.objects.create(talker=Spark, message="Hello, Kort! :)")
 
