@@ -25,7 +25,8 @@ In class:
 Homework:
 
 1. urls.py Configuration
-2. setup Database on Heroku
+2. make a new guestbook
+3. Setup Database on Heroku
 
 `https://spark-syz.herokuapp.com/`
 
