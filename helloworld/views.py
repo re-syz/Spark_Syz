@@ -42,4 +42,9 @@ def guestbook(request):
     Kort = "Kort"
     Spark = "Spark"
 
+    # t1 = TextMessage.objects.create(talker=Kort, message="Hey, Spark!")
+    # t2 = TextMessage.objects.create(talker=Spark, message="Hello, Kort! :)")
+
+    msgs = TextMessage.objects.all()
+
     return render(request, 'guestbook.html')

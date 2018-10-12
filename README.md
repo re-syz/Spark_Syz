@@ -19,6 +19,19 @@ In class:
 
 1. DESTROY SQLite
 2. Install PostgreSQL
+3. Learn how to use "GET & POST"
+4. Edit CSS & HTML file
+
+Homework:
+
+1. urls.py Configuration
+2. setup Database on Heroku
+
+`https://spark-syz.herokuapp.com/`
+
+guestbook:
+
+`https://spark-syz.herokuapp.com/guestbook/`
 
 
 ---
