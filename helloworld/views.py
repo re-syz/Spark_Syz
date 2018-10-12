@@ -47,4 +47,4 @@ def guestbook(request):
 
     msgs = TextMessage.objects.all()
 
-    return render(request, 'guestbook.html')
+    return render(request, 'guestbook.html', locals())
