@@ -13,6 +13,15 @@ B06104006
 
 
 ---
+Week 5
+
+In class:
+
+1. DESTROY SQLite
+2. Install PostgreSQL
+
+
+---
 Week 4
 
 In class:
