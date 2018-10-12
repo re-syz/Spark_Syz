@@ -52,8 +52,6 @@ MIDDLEWARE = [
 ]
 
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 ROOT_URLCONF = 'helloworld.urls'
 
 TEMPLATES = [
@@ -139,18 +137,22 @@ if DEBUG:
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 
+#
+# # STATICFILES_DIRS = [
+# #     os.path.join(BASE_DIR, 'static'),
+# # ]
+#
+#
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_URL = '/static/'
 #
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static'),
 # ]
 
 
-#settings for localhost
+# settings for localhost
 django_heroku.settings(locals())
