@@ -2,6 +2,10 @@
 131072
 280918
 CS+X
+
+
+
+
 """
 
 
@@ -17,6 +21,7 @@ from guestbook.models import TextMessage
 
 
 # =============
+
 def index(request):
     return render(request, 'index.html', locals())
 
@@ -34,4 +39,7 @@ def portfolio(request):
 
 
 def guestbook(request):
+    Kort = "Kort"
+    Spark = "Spark"
+
     return render(request, 'guestbook.html')

@@ -38,25 +38,26 @@
             </div>
         </div>
     </nav>
-    <div id=container>
-        <div id="content">
-            {% for msg in msgs %}
-            <div class='msg'>
-                <span class="name">{{msg.talker}}</span>
-                {{msg.message}}
+    <section id="guestbook">
+        <div class="container">
+            <div id="content">
+                {% for msg in msgs %}
+                <div class='msg'>
+                    <span class="name">{{msg.talker}}</span>
+                    {{msg.message}}
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            <div id="send-box">
+                <form id="send-form" action="." method="post">
+                    {% csrf_token %}
+                    <input type="text" name="name" id="name" placeholder="ID">
+                    <input type="text" name="msg" id="msg" placeholder="Message">
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </div>
         </div>
-        <div id="send-box">
-            <form id="send-form" action="." method="post">
-                <input type='hidden' name='csrfmiddlewaretoken' value='b15f277787a64a7caebe0e588b8bde59599b2b5f1c1679a61b5ae4dcdfd63af4' />
-                <input type="text" name="name" id="name" placeholder="ID">
-                <input type="text" name="msg" id="msg" placeholder="Message">
-                <input type="submit" id="submit" value="Submit">
-            </form>
-        </div>
-    </div>
-
+    </section>
     <!-- script -->
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
