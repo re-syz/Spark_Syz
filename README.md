@@ -25,8 +25,10 @@ In class:
 Homework:
 
 1. urls.py Configuration
-2. make a new guestbook
+2. Make a new guestbook
 3. Setup Database on Heroku
+4. Complete weekly missions
+5. Beautify my website :)
 
 `https://spark-syz.herokuapp.com/`
 
