@@ -51,3 +51,21 @@ def guestbook(request):
     msgs = TextMessage.objects.all()
 
     return render(request, 'guestbook.html', locals())
+
+def login(request):
+
+    # # if request.user.is_authenticated():
+    # #     return HttpResponseRedirect('/index/')
+    #
+    # username = request.POST.get('username', '')
+    # password = request.POST.get('password', '')
+    #
+    # user = auth.authenticate(username=username, password=password)
+    #
+    # if user is not None and user.is_active:
+    #     auth.login(request, user)
+    #     return HttpResponseRedirect('/index/')
+    # else:
+    #     return render_to_response('login.html')
+
+    return render(request, 'login.html', locals())
