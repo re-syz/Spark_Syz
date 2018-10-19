@@ -27,6 +27,7 @@
             <a class="navbar-brand" href="{% url 'index' %}">
                 <img class="logo" src="{% static 'img/logo.png' %}" alt="logo">
             </a>
+            {% block content %}
             {% if user.is_authenticated %}
             Hi {{ user.username }}!
             <p><a href="{% url 'logout' %}">
@@ -43,6 +44,7 @@
             </a>
             </p>
             {% endif %}
+            {% endblock %}
             <div class="nav-content hideNav hidden">
                 <ul class="nav-list vcenter">
                     <li class="nav-item"><a class="item-anchor" href="{% url 'index' %}">Home</a></li>
