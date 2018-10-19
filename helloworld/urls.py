@@ -27,7 +27,7 @@ urls.py
 # =============
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
@@ -36,9 +36,11 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('base/', views.base, name='base'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('guestbook/', views.guestbook, name='guestbook'),
-    path('login/', views.login, name='login')
+    path('account/', include('account.urls')),
+    path('account/', include('django.contrib.auth.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

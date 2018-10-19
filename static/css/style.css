@@ -690,3 +690,8 @@ input[type="button"] {
     content: " ]   : ";
     size: 100%;
 }
+
+.log {
+    display:inline-block;
+    margin-right:auto 
+}

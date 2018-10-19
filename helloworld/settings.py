@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'guestbook'
+    'guestbook',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -156,3 +157,7 @@ STATIC_URL = '/static/'
 
 # settings for localhost
 django_heroku.settings(locals())
+
+# REDIRECT_URL
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
