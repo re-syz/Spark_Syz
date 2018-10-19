@@ -16,7 +16,7 @@ from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-import random
+import time
 from guestbook.models import TextMessage
 
 
@@ -42,8 +42,12 @@ def guestbook(request):
     Kort = "Kort"
     Spark = "Spark"
 
-    if 'name' in request.GET:
-        txt_msg = TextMessage.objects.create(talker=request.GET['name'], message=request.GET['msg'])
+    if request.method == 'POST':
+        _talker = request.POST.get('name')
+        if request.user.is_authenticated:
+            _talker = request.user.username
+        _message = request.POST.get('msg')
+        TextMessage.objects.create(talker=_talker, message=_message)
 
     # t1 = TextMessage.objects.create(talker=Kort, message="Hey, Spark!")
     # t2 = TextMessage.objects.create(talker=Spark, message="Hello, Kort! :)")
@@ -51,6 +55,7 @@ def guestbook(request):
     msgs = TextMessage.objects.all()
 
     return render(request, 'guestbook.html', locals())
+
 
 def base(request):
 

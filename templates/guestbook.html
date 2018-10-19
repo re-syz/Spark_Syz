@@ -27,6 +27,22 @@
             <a class="navbar-brand" href="{% url 'index' %}">
                 <img class="logo" src="{% static 'img/logo.png' %}" alt="logo">
             </a>
+            {% if user.is_authenticated %}
+            Hi {{ user.username }}!
+            <p><a href="{% url 'logout' %}">
+                <img class="logout" src="{% static 'img/logout.png' %}" height="40" width="40" alt="logout">
+            </a></p>
+            {% else %}
+            You are not logged in
+            <p>
+            <a href="{% url 'login' %}">
+                <img class="login" src="{% static 'img/login.png' %}" height="40" width="40" alt="login">
+            </a>
+            <a href="{% url 'signup' %}">
+                <img class="signup" src="{% static 'img/signup.png' %}" height="40" width="40" alt="signup">
+            </a>
+            </p>
+            {% endif %}
             <div class="nav-content hideNav hidden">
                 <ul class="nav-list vcenter">
                     <li class="nav-item"><a class="item-anchor" href="{% url 'index' %}">Home</a></li>
@@ -48,14 +64,23 @@
                 </div>
                 {% endfor %}
             </div>
+            {% if user.is_authenticated %}
             <div id="send-box">
-                <form id="send-form" action="." method="get">
+                <form id="send-form" action="." method="post">
+                    {% csrf_token %}
+                    <input type="text" name="msg" id="msg" placeholder="Message">
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            {% else %}
+            <div id="send-box">
+                <form id="send-form" action="." method="post">
                     {% csrf_token %}
                     <input type="text" name="name" id="name" placeholder="ID">
                     <input type="text" name="msg" id="msg" placeholder="Message">
                     <input type="submit" id="submit" value="Submit">
                 </form>
             </div>
+            {% endif %}
         </div>
     </section>
     <!-- script -->
