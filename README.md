@@ -13,6 +13,28 @@ B06104006
 
 
 ---
+Week 6
+
+In class:
+
+1. Learn how to use Django auth to create login system
+2. Use django default signup form
+3. Control registered users by staff page
+4. Create new app "account"
+5. Don't have to enter ID to submit a message if users are authenticated
+
+Homework:
+
+1. Beautify login page and signup page
+2. Create custom signup form
+
+`http://spark-syz.herokuapp.com`
+
+Sign up here (or directly go to homepage and click the signup icon):
+
+`http://spark-syz.herokuapp.com/account/signup`
+
+---
 Week 5
 
 In class:
