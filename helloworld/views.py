@@ -42,6 +42,9 @@ def guestbook(request):
     Kort = "Kort"
     Spark = "Spark"
 
+    # t1 = TextMessage.objects.create(talker=Kort, message="Hey, Spark!")
+    # t2 = TextMessage.objects.create(talker=Spark, message="Hello, Kort! :)")
+
     if request.method == 'POST':
         _talker = request.POST.get('name')
         if request.user.is_authenticated:
@@ -49,10 +52,13 @@ def guestbook(request):
         _message = request.POST.get('msg')
         TextMessage.objects.create(talker=_talker, message=_message)
 
-    # t1 = TextMessage.objects.create(talker=Kort, message="Hey, Spark!")
-    # t2 = TextMessage.objects.create(talker=Spark, message="Hello, Kort! :)")
-
     msgs = TextMessage.objects.all()
+
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+            if request.GET.get('msg_search') is not None:
+                msg_search = request.GET.get('msg_search')
+                msgs = TextMessage.objects.filter(message__icontains=msg_search)
 
     return render(request, 'guestbook.html', locals())
 
