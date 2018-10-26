@@ -26,6 +26,10 @@ def index(request):
     return render(request, 'index.html', locals())
 
 
+def base(request):
+    return render(request, 'base.html', locals())
+
+
 def about(request):
     return render(request, 'about.html')
 
@@ -50,7 +54,7 @@ def guestbook(request):
         if request.user.is_authenticated:
             _talker = request.user.username
         _message = request.POST.get('msg')
-        TextMessage.objects.create(talker = _talker, message = _message)
+        TextMessage.objects.create(talker=_talker, message=_message)
 
     msgs = TextMessage.objects.all()
 
@@ -58,11 +62,21 @@ def guestbook(request):
         if request.user.is_authenticated:
             if request.GET.get('msg_search') is not None:
                 msg_search = request.GET.get('msg_search')
-                msgs = TextMessage.objects.filter(message__icontains = msg_search)
+                msgs = TextMessage.objects.filter(message__icontains=msg_search)
 
     return render(request, 'guestbook.html', locals())
 
 
-def base(request):
+def personal_history(request):
+    if request.user.is_authenticated:
+        user = request.user
+        msgs = TextMessage.objects.filter(talker__exact=user)
 
-    return render(request, 'base.html', locals())
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+            if request.GET.get('msg_search') is not None:
+                msg_search = request.GET.get('msg_search')
+                msgs = TextMessage.objects.filter(message__icontains=msg_search)
+
+
+    return render(request, 'personal_history.html', locals())
