@@ -55,6 +55,7 @@
         </div>
     </nav>
     <section id="guestbook">
+        {% if user.is_authenticated %}
         <div class="container">
             <div style="margin: 0 auto;">
 
@@ -80,17 +81,25 @@
                     <input type="text" name="msg" id="msg" placeholder="Message">
                     <input type="submit" id="submit" value="Submit">
                 </form>
-                {% else %}
-                <div id="send-box">
-                    <form id="send-form" action="." method="post">
-                        {% csrf_token %}
-                        <input type="text" name="name" id="name" placeholder="ID">
-                        <input type="text" name="msg" id="msg" placeholder="Message">
-                        <input type="submit" id="submit" value="Submit">
-                    </form>
-                </div>
-                {% endif %}
             </div>
+            {% endif %}
+        </div>
+        {% else %}
+        <div class="container">
+            <div id="content">
+                {% for msg in msgs %}
+                <div class='msg'>
+                    <span class="name">{{msg.talker}}</span>
+                    {{msg.message}}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-12" style = align-center>
+                <div style="text-align:center;font-size:26px">Please Login to leave messages.</div>
+            </div>
+        </div>
+        {% endif %}
+
     </section>
     <!-- script -->
     <script src="{% static 'js/jquery.js' %}"></script>
