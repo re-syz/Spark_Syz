@@ -58,7 +58,7 @@
     <section id="guestbook">
         {% if user.is_authenticated %}
         <div class="container">
-            <div style="margin: 0 auto;">
+            <!-- <div style="margin: 0 auto;">
 
                 <form class="col-md-12" style="text-align: right;float: right;" method="GET" action=".">
                     {% csrf_token %}
@@ -66,7 +66,7 @@
                     <button type="submit">Search</button>
                 </form>
 
-            </div>
+            </div> -->
             <div id="content">
                 {% for msg in msgs %}
                 <div class='msg'>
@@ -77,10 +77,10 @@
             </div>
             {% if user.is_authenticated %}
             <div id="send-box">
-                <form id="send-form" action="." method="post">
+                <form class="col-md-12" method="GET" action=".">
                     {% csrf_token %}
                     <input type="text" name="msg" id="msg" placeholder="Copy the message you want to edit or delete"><br>
-                    <input type="text" name="msg" id="edited_msg" placeholder="Type edited message or leave it blank to delete"><br>
+                    <input type="text" name="edited_msg" id="edited_msg" placeholder="Type edited message or leave it blank to delete"><br>
                     <input type="submit" id="submit" value="Submit">
                 </form>
             </div>

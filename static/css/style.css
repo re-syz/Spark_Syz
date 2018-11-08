@@ -651,7 +651,7 @@ a:visited {
     display: inline-block;
 }
 
-#name, #msg, #submit {
+#name, #msg, #edited_msg, #submit {
     margin: 10px;
     font-size: 15px;
 }
@@ -664,6 +664,11 @@ input[name="name"] {
 input[name="msg"] {
     width: 70%;
 }
+
+input[name="edited_msg"] {
+    width: 70%;
+}
+
 
 input[type="button"] {
     width: 10%;

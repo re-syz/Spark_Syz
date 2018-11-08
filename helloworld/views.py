@@ -100,24 +100,25 @@ def personal_history(request):
         user = request.user
         msgs = TextMessage.objects.filter(talker__exact=user)
 
+    # if request.method == 'GET':
+    #     if request.user.is_authenticated:
+    #         if request.GET.get('msg_search') is not None:
+    #             msg_search = request.GET.get('msg_search')
+    #             msgs = TextMessage.objects.filter(message__icontains=msg_search)
+
     if request.method == 'GET':
         if request.user.is_authenticated:
-            if request.GET.get('msg_search') is not None:
-                msg_search = request.GET.get('msg_search')
-                msgs = TextMessage.objects.filter(message__icontains=msg_search)
+            if request.GET.get('msg') is not None:
+                _message = request.GET.get('msg')
+                _edited_msg = request.GET.get('edited_msg')
 
-    if request.method == 'POST':
-        _message = request.POST.get('msg')
-        _edited_msg = request.POST.get('edited_msg')
+                if _edited_msg != "":
+                    current_msg = TextMessage.objects.get(message=_message)
+                    current_msg.message = _edited_msg
+                    current_msg.save()
 
-        if _message != "":
-            if _edited_msg != "":
-                current_msg = TextMessage.objects.get(message=_message)
-                current_msg.message = edited_msg
-                current_msg.save()
-
-            else:
-                current_msg = TextMessage.objects.get(message=_message)
-                current_msg.delete()
+                else:
+                    current_msg = TextMessage.objects.get(message=_message)
+                    current_msg.delete()
 
     return render(request, 'personal_history.html', locals())
