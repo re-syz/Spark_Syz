@@ -107,7 +107,9 @@ def personal_history(request):
     #             msgs = TextMessage.objects.filter(message__icontains=msg_search)
 
     if request.method == 'GET':
+
         if request.user.is_authenticated:
+
             if request.GET.get('msg') is not None:
                 _message = request.GET.get('msg')
                 _edited_msg = request.GET.get('edited_msg')
