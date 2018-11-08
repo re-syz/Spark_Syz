@@ -13,6 +13,22 @@ B06104006
 
 
 ---
+Week 7
+
+In class:
+
+1. Try to understand how to add "CRUD" to my site
+2. Learn how to use django group
+3. Control registered users by group
+
+Homework:
+
+1. Add new group "TextMessage" for give users permission
+2. Define a new function to detect if the user is in group
+3. Add new users to the group "TextMessage"
+
+
+---
 Week 6
 
 In class:
