@@ -75,6 +75,17 @@
                 </div>
                 {% endfor %}
             </div>
+            {% if user.is_authenticated %}
+            <div id="send-box">
+                <form id="send-form" action="." method="post">
+                    {% csrf_token %}
+                    <input type="text" name="msg" id="msg" placeholder="Copy the message you want to edit or delete"><br>
+                    <input type="text" name="msg" id="edited_msg" placeholder="Type edited message or leave it blank to delete"><br>
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </div>
+            {% endif %}
+
         </div>
         {% else %}
         <div class="container">

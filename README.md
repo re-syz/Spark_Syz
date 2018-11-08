@@ -26,7 +26,10 @@ Homework:
 1. Add new group "TextMessage" for give users permission
 2. Define a new function to detect if the user is in group
 3. Add new users to the group "TextMessage"
+4. Allow users to edit their messages
+5. Allow users to delete their messages
 
+`http://spark-syz.herokuapp.com`
 
 ---
 Week 6

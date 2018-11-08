@@ -44,6 +44,15 @@ def portfolio(request):
     return render(request, 'portfolio.html')
 
 
+register = template.Library()
+
+
+@register.filter(name='in_group')
+def in_group(user, group_name):
+    group = Group.objects.get(name=group_name)
+    return True if group in user.groups.all() else False
+
+
 def guestbook(request):
     Kort = "Kort"
     Spark = "Spark"
@@ -78,6 +87,15 @@ def guestbook(request):
 
 
 def personal_history(request):
+
+    users_in_group = Group.objects.get(name="TextMessage").user_set.all()
+
+    if request.user.is_authenticated:
+        current_user = request.user
+        if current_user not in users_in_group:
+            my_group = Group.objects.get(name='TextMessage')
+            my_group.user_set.add(current_user)
+
     if request.user.is_authenticated:
         user = request.user
         msgs = TextMessage.objects.filter(talker__exact=user)
@@ -87,5 +105,19 @@ def personal_history(request):
             if request.GET.get('msg_search') is not None:
                 msg_search = request.GET.get('msg_search')
                 msgs = TextMessage.objects.filter(message__icontains=msg_search)
+
+    if request.method == 'POST':
+        _message = request.POST.get('msg')
+        _edited_msg = request.POST.get('edited_msg')
+
+        if _message != "":
+            if _edited_msg != "":
+                current_msg = TextMessage.objects.get(message=_message)
+                current_msg.message = edited_msg
+                current_msg.save()
+
+            else:
+                current_msg = TextMessage.objects.get(message=_message)
+                current_msg.delete()
 
     return render(request, 'personal_history.html', locals())
