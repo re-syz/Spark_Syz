@@ -13,6 +13,10 @@ B06104006
 
 
 ---
+__Case Closed__
+
+
+---
 Week 7
 
 In class:
